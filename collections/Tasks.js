@@ -13,7 +13,17 @@ taskSchema = new SimpleSchema({
   },
   class: {
     type: String,
-    label: "Class"
+    label: "Class",
+    autoform:{
+      type: "hidden"
+    }
+  },
+  classID: {
+    type: String,
+    label: "Class ID",
+    autoform: {
+      type: "hidden"
+    }
   },
   highPriority: {
     type: Boolean,

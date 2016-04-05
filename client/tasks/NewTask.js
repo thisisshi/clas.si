@@ -4,6 +4,7 @@ Template.NewTask.helpers({
     var currentClass = Classes.findOne({_id: id});
     var name = currentClass.name;
     $('input[name="class"]').val(name);
+    $('input[name="classID"]').val(id);
     return Classes.findOne({_id: id});
   }
 });
