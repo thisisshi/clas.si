@@ -1,0 +1,12 @@
+<template name="Classes">
+  {{> NewClass}}
+  <section class="classes">
+    {{#if Template.subscriptionsReady}}
+      {{#each classes}}
+        {{> Class}}
+      {{/each}}
+    {{else}}
+      <p>Loading...</p>
+    {{/if}}
+  </section>
+</template>
