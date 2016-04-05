@@ -3,6 +3,9 @@ Classes = new Mongo.Collection("classes");
 Classes.allow({
   insert:function(userId, doc){
     return !!userId;
+  },
+  update: function(userId, doc){
+    return !!userId;
   }
 });
 
