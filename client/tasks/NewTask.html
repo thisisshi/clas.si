@@ -1,5 +1,9 @@
 <template name="NewTask">
+  <h2>New Task for {{class.name}}</h2>
   <div class="new-class-container">
     {{> quickForm collection="Tasks" id="insertTasksform" type="insert" class="new-task-form"}}
   </div>
+  <script>
+    var x = document.getElementByName('class').value={{class.name}};
+  </script>
 </template>

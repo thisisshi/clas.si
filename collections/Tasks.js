@@ -13,10 +13,7 @@ taskSchema = new SimpleSchema({
   },
   class: {
     type: String,
-    label: "Class",
-    autoValue: function(){
-      return "test";
-    },
+    label: "Class"
   },
   highPriority: {
     type: Boolean,

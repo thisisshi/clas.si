@@ -1,9 +1,4 @@
 <template name="Tasks">
-  {{#if $.Session.get 'newTask'}}
-    {{> NewTask}}
-  {{else}}
-    <button class="new-class">New Task</button>
-  {{/if}}
   <section class="tasks">
     {{#if Template.subscriptionsReady}}
     {{#each tasks}}
