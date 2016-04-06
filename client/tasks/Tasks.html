@@ -3,6 +3,9 @@
     {{#if Template.subscriptionsReady}}
     {{#each tasks}}
       {{> Task}}
+      {{else}}
+      <h2>Congrats! Looks like you're all done here... or are you?</h2>
+      <h3>Add New Tasks from your <a href="/classes">Classes</a>!</h3>
     {{/each}}
     {{else}}
       <p>Loading...</p>
