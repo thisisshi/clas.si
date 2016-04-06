@@ -1,6 +1,6 @@
 <template name = "Task">
+  <a href="/task/{{_id}}" ><h3>{{name}}</h3></a>
    <article class="class {{#if highPriority}}highPriority{{/if}}">
-     <a href="/task/{{_id}}"><h3>{{name}}</h3></a>
      <i class="fa fa-trash"></i>
      <p>{{class}}</p>
      <p>{{dueDate}}</p>

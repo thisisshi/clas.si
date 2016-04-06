@@ -15,46 +15,76 @@ Classes.allow({
 MeetingDates = new SimpleSchema({
   monday: {
     type: Boolean,
-    label: "Monday"
+    label: "Monday",
+    autoform:{
+      class:"checkbox"
+    }
   },
   tuesday: {
     type: Boolean,
-    label: "Tuesday"
+    label: "Tuesday",
+    autoform:{
+      class:"checkbox"
+    }
   },
   wednesday:{
     type: Boolean,
-    label: "Wednesday"
+    label: "Wednesday",
+    autoform:{
+      class:"checkbox"
+    }
   },
   thursday:{
     type: Boolean,
-    label: "Thursday"
+    label: "Thursday",
+    autoform:{
+      class:"checkbox"
+    }
   },
   friday:{
     type: Boolean,
-    label: "Friday"
+    label: "Friday",
+    autoform:{
+      class:"checkbox"
+    }
   }
 });
 
 homeworkAutoDue = new SimpleSchema({
   monday: {
     type: Boolean,
-    label: "Monday"
+    label: "Monday",
+    autoform:{
+      class:"checkbox"
+    }
   },
   tuesday: {
     type: Boolean,
-    label: "Tuesday"
+    label: "Tuesday",
+    autoform:{
+      class:"checkbox"
+    }
   },
   wednesday:{
     type: Boolean,
-    label: "Wednesday"
+    label: "Wednesday",
+    autoform:{
+      class:"checkbox"
+    }
   },
   thursday:{
     type: Boolean,
-    label: "Thursday"
+    label: "Thursday",
+    autoform:{
+      class:"checkbox"
+    }
   },
   friday:{
     type: Boolean,
-    label: "Friday"
+    label: "Friday",
+    autoform:{
+      class:"checkbox"
+    }
   }
 });
 
@@ -69,11 +99,15 @@ ClassSchema = new SimpleSchema({
   },
   professorEmail:{
     type: String,
-    label: "Professor Email"
+    label: "Professor Email",
+    regEx: SimpleSchema.RegEx.Email
   },
   meetingDates: {
     type: MeetingDates,
-    label: "Class Meeting Days"
+    label: "Class Meeting Days",
+    autoform:{
+      class: "checkbox"
+    }
   },
   members: {
     type: [String],
