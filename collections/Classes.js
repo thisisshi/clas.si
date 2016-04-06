@@ -75,6 +75,10 @@ ClassSchema = new SimpleSchema({
     type: MeetingDates,
     label: "Class Meeting Days"
   },
+  members: {
+    type: [String],
+    label: "Group Member Emails"
+  },
   hwDueDay: {
     type: homeworkAutoDue,
     label: "Homework Is Typically Due On:"
