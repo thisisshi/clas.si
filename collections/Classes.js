@@ -6,6 +6,9 @@ Classes.allow({
   },
   update: function(userId, doc){
     return !!userId;
+  },
+  remove: function(userId, doc){
+    return !!userId;
   }
 });
 
@@ -95,6 +98,12 @@ ClassSchema = new SimpleSchema({
     autoform: {
       type: "hidden"
     }
+  }
+});
+
+Meteor.methods({
+  deleteClass:function(id){
+    Classes.remove(id);
   }
 });
 

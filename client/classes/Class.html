@@ -1,6 +1,7 @@
 <template name = "Class">
    <article class="class">
      <a href="/class/{{_id}}"><h3>{{name}}</h3></a>
+     <i class="fa fa-trash"></i>
      <p>{{professor}}</p>
      <p><a href="mailto:{{professorEmail}}">Email Professor</a></p>
      <button class="btn-primary add-new-task" onclick="location.href='/tasks/{{_id}}'">Add New Task</button>

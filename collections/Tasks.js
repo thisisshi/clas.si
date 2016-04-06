@@ -3,6 +3,8 @@ Tasks = new Mongo.Collection("tasks");
 Tasks.allow({
   insert:function(userId, doc){
     return !!userId;
+  }, remove:function(userId, doc){
+    return !!userId;
   }
 });
 
@@ -52,6 +54,12 @@ taskSchema = new SimpleSchema({
     autoform: {
       type: "hidden"
     }
+  }
+});
+
+Meteor.methods({
+  deleteTask:function(id){
+    Tasks.remove(id);
   }
 });
 

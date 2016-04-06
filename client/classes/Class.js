@@ -1,5 +1,5 @@
 Template.Class.events({
-  'click .add-new-task':function(){
-
+  'click .fa-trash':function(){
+    Meteor.call('deleteClass', this._id);
   }
 })
