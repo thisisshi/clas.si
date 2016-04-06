@@ -2,7 +2,7 @@
   {{#if $.Session.get 'newClass'}}
     {{> NewClass}}
   {{else}}
-    <button class="new-class">New Class</button>
+    <button class="new-class" onclick="location.href='/class/new'">New Class</button>
   {{/if}}
   <section class="classes">
     {{#if Template.subscriptionsReady}}

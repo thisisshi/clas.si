@@ -1,5 +1,5 @@
 <template name = "Task">
-   <article class="class">
+   <article class="class {{#if highPriority}}highPriority{{/if}}">
      <a href="/task/{{_id}}"><h3>{{name}}</h3></a>
      <p>{{class}}</p>
      <p>{{dueDate}}</p>

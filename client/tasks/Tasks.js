@@ -1,6 +1,8 @@
 Template.Tasks.helpers({
   tasks: ()=> {
-    return Tasks.find({});
+    return Tasks.find({},{
+      sort: {dueDate: 1}
+    });
   }
 });
 Template.Tasks.onCreated(function(){
