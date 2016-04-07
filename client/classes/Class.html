@@ -1,8 +1,13 @@
 <template name = "Class">
    <article class="class">
      <a href="/class/{{_id}}"><h3>{{name}}</h3></a>
-     <i class="fa fa-trash"></i>
+     {{#if isAuthor}}
+       <i class="fa fa-trash"></i>
+     {{/if}}
      <p>{{professor}}</p>
+     <p>
+       {{author}}
+     </p>
      <p><a href="mailto:{{professorEmail}}">Email Professor</a></p>
      <button class="btn-primary add-new-task" onclick="location.href='/tasks/{{_id}}'">Add New Task</button>
      <button class="btn-primary add-new-task" onclick="location.href='/chat/{{_id}}'">Your Study Group</button>
