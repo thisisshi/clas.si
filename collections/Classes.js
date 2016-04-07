@@ -88,6 +88,13 @@ homeworkAutoDue = new SimpleSchema({
   }
 });
 
+Members = new SimpleSchema({
+  email:{
+    type: String,
+    label: "Email"
+  }
+});
+
 ClassSchema = new SimpleSchema({
   name: {
     type: String,
@@ -110,8 +117,7 @@ ClassSchema = new SimpleSchema({
     }
   },
   members: {
-    type: [String],
-    label: "Group Member Emails"
+    type: [Members]
   },
   hwDueDay: {
     type: homeworkAutoDue,

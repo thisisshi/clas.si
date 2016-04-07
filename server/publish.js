@@ -1,5 +1,5 @@
-Meteor.publish('classes', function(){
-  return Classes.find({author: this.userId});
+Meteor.publish('classes', function(email){
+  return Classes.find({members:{$elemMatch:{email:email}}});
 });
 Meteor.publish('singleClass', function(id){
   check(id, String);
@@ -14,4 +14,7 @@ Meteor.publish('singleTask', function(id){
 });
 Meteor.publish('messages', function(id){
   return Messages.find({classID: id});
+});
+Meteor.publish(null, function() {
+    return Meteor.users.find({_id: this.userId}, {fields: { emails: 1, profile: 1 } });
 });
