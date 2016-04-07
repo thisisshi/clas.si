@@ -13,5 +13,5 @@ Meteor.publish('singleTask', function(id){
   return Tasks.find({_id: id});
 });
 Meteor.publish('messages', function(id){
-  return Messages.find({author: this.userId});
+  return Messages.find({classID: id});
 });

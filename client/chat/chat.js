@@ -8,8 +8,8 @@ Template.Chat.helpers({
 
 Template.Chat.onCreated(function(){
   var self = this;
-  console.log('hello');
   self.autorun(function(){
-    self.subscribe('messages');
+    var id = FlowRouter.getParam('id');
+    self.subscribe('messages', id);
   });
 });
