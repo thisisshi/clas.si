@@ -1,3 +1,14 @@
 <Template name="Chat">
-  <h1>hello</h1>
+  <section class="messages">
+    {{#if Template.subscriptionsReady}}
+      {{#each messages}}
+        {{> messages.message}}
+      {{/each}}
+    {{else}}
+      <p>Loading...</p>
+    {{/if}}
+  </section>
+  <div class="new-class-container">
+    {{> quickForm collection="Messages" id="NewMessage" type="insert" class="new-message-form"}}
+  </div>
 </Template>

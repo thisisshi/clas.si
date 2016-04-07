@@ -12,3 +12,6 @@ Meteor.publish('singleTask', function(id){
   check(id, String);
   return Tasks.find({_id: id});
 });
+Meteor.publish('messages', function(id){
+  return Messages.find({author: this.userId});
+});
