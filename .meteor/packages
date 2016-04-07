@@ -36,3 +36,5 @@ gwendall:auth-client-callbacks
 check
 fezvrasta:bootstrap-material-design
 useraccounts:bootstrap
+rajit:bootstrap3-datepicker
+aldeed:autoform-bs-datepicker

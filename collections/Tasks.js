@@ -33,7 +33,10 @@ taskSchema = new SimpleSchema({
   },
   dueDate: {
     type: Date,
-    label: "Due Date"
+    label: "Due Date",
+    autoform: {
+      type: "bootstrap-datepicker"
+    }
   },
   author:{
     type: String,
