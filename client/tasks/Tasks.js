@@ -8,6 +8,8 @@ Template.Tasks.helpers({
 Template.Tasks.onCreated(function(){
   var self = this;
   self.autorun(function(){
-    self.subscribe('tasks');
+    var user = Meteor.user();
+    var email = user.emails[0].address;
+    self.subscribe('tasks', email);
   });
 });

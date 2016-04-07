@@ -5,8 +5,12 @@ Meteor.publish('singleClass', function(id){
   check(id, String);
   return Classes.find({_id: id});
 });
-Meteor.publish('tasks', function(){
-  return Tasks.find({author: this.userId});
+Meteor.publish('tasks', function(email){
+  var classIDs = [];
+  var allClasses = Classes.find({members:{$elemMatch:{email:email}}},{_id:1}).forEach(function(obj){
+    classIDs.push(obj._id);
+  });
+  return Tasks.find({classID: {$in: classIDs}})
 });
 Meteor.publish('singleTask', function(id){
   check(id, String);
