@@ -2,7 +2,7 @@
   <section class="messages">
     {{#if Template.subscriptionsReady}}
       {{#each messages}}
-        {{> messages.message}}
+        {{> Message}}
       {{/each}}
     {{else}}
       <p>Loading...</p>
