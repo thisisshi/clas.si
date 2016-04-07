@@ -2,7 +2,12 @@
   <header>
     <a href="/" style="color: #fff"><h1>clas.si</h1></a>
     <div class="top-right">
-        <h1><a href='/logout' style="color: #fff">logout</a></h1>
+      {{#if currentUser}}
+          <a href="#" class="logout">Logout</a>
+      {{else}}
+          <a href="/register">Register</a>
+          <a href="/login">Login</a>
+      {{/if}}
     </div>
   </header>
 </template>
