@@ -4,12 +4,44 @@
      {{#if isAuthor}}
        <i class="fa fa-trash"></i>
      {{/if}}
-     <p>{{professor}}</p>
-     <p>
-       {{author}}
-     </p>
-     <p><a href="mailto:{{professorEmail}}">Email Professor</a></p>
-     <button class="btn-primary add-new-task" onclick="location.href='/tasks/{{_id}}'">Add New Task</button>
-     <button class="btn-primary add-new-task" onclick="location.href='/chat/{{_id}}'">Your Study Group</button>
+     <p>Professor: <a href="mailto:{{professorEmail}}">{{professor}}</a></p>
+     <p>Meeting Dates:
+      {{#if meetingDates.monday}}
+      Monday
+      {{/if}}
+      {{#if meetingDates.tuesday}}
+      Tuesday
+      {{/if}}
+      {{#if meetingDates.wednesday}}
+      Wednesday
+      {{/if}}
+      {{#if meetingDates.thursday}}
+      Thursday
+      {{/if}}
+      {{#if meetingDates.friday}}
+      Friday
+      {{/if}}
+    </p>
+    <p>Homework is Typically Due On:
+     {{#if homeworkAutoDue.monday}}
+     Monday
+     {{/if}}
+     {{#if homeworkAutoDue.tuesday}}
+     Tuesday
+     {{/if}}
+     {{#if homeworkAutoDue.wednesday}}
+     Wednesday
+     {{/if}}
+     {{#if homeworkAutoDue.thursday}}
+     Thursday
+     {{/if}}
+     {{#if homeworkAutoDue.friday}}
+     Friday
+     {{/if}}
+   </p>
+     <div class="btn-group brn-group-justified btn-group-raised">
+       <a class="btn" onclick="location.href='/tasks/{{_id}}'">Add New Task</a>
+       <a class="btn" onclick="location.href='/chat/{{_id}}'">Your Study Group</a>
+     </div>
    </article>
 </template>

@@ -117,7 +117,10 @@ ClassSchema = new SimpleSchema({
     }
   },
   members: {
-    type: [Members]
+    type: [Members],
+    autoform:{
+      class:"form-group-full"
+    }
   },
   hwDueDay: {
     type: homeworkAutoDue,
