@@ -37,16 +37,16 @@
      {{/if}}
    </p>
      <div class="btn-group brn-group-justified btn-group-raised">
-       <a class="btn" onclick="location.href='/tasks/{{_id}}'">Add New Task</a>
-       <a class="btn" onclick="location.href='/chat/{{_id}}'">Your Study Group</a>
+       <a class="btn" onclick="location.href='/tasks/{{class._id}}'">Add New Task</a>
+       <a class="btn" onclick="location.href='/chat/{{class._id}}'">Your Study Group</a>
      </div>
    </article>
    {{#if Template.subscriptionsReady}}
    {{#each tasks}}
      {{> Task}}
      {{else}}
-     <h2>Congrats! Looks like you're all done here... or are you?</h2>
-     <h3>Add New Tasks from your <a href="/classes">Classes</a>!</h3>
+     <h3>Congrats! Looks like you're all done here... or are you?</h3>
+     <h4>Add New Tasks for {{class.name}} by clicking "Add New Task" above!</h4>
    {{/each}}
    {{else}}
      <p>Loading...</p>
