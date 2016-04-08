@@ -1,7 +1,7 @@
 <template name = "ClassSingle">
    <article class="class">
      <h3>{{class.name}}</h3>
-     <p>Professor: <a href="mailto:{{class.professorEmail}}">{{professor}}</a></p>
+     <p>Professor: <a href="mailto:{{class.professorEmail}}">{{class.professor}}</a></p>
      <p>Meeting Dates:
       {{#if class.meetingDates.monday}}
       Monday
