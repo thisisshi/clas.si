@@ -1,3 +1,12 @@
 <template name="TaskSingle">
-  <h1>{{task.name}}</h1>
+  <article class="class">
+    <h3>{{task.name}}</h3>
+    <h4>{{task.class}}</h4>
+    <p>
+      Due {{momentFormat dueDate}}
+    </p>
+    <p>
+      Description: {{task.description}}
+    </p>
+  </article>
 </template>

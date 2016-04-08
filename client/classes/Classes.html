@@ -1,9 +1,4 @@
 <template name="Classes">
-  {{#if $.Session.get 'newClass'}}
-    {{> NewClass}}
-  {{else}}
-    <button class="btn btn-raised btn-primary" onclick="location.href='/class/new'">New Class</button>
-  {{/if}}
   <section class="classes">
     {{#if Template.subscriptionsReady}}
       {{#each classes}}
@@ -13,4 +8,9 @@
       <p>Loading...</p>
     {{/if}}
   </section>
+  {{#if $.Session.get 'newClass'}}
+    {{> NewClass}}
+  {{else}}
+    <button class="btn btn-raised btn-primary" onclick="location.href='/class/new'">New Class</button>
+  {{/if}}
 </template>

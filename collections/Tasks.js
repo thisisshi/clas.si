@@ -8,6 +8,40 @@ Tasks.allow({
   }
 });
 
+Message = new SimpleSchema({
+  message: {
+    type: String,
+    label: "Message"
+  },
+  classID:{
+    type: String,
+    label: "classID",
+    autoform: {
+      type:"hidden"
+    }
+  },
+  author:{
+    type: String,
+    label: "Author",
+    autoValue: function(){
+      return this.userId;
+    },
+    autoform: {
+      type: "hidden"
+    }
+  },
+  createdAt:{
+    type: Date,
+    label:"Created At",
+    autoValue: function(){
+      return new Date();
+    },
+    autoform: {
+      type: "hidden"
+    }
+  }
+});
+
 taskSchema = new SimpleSchema({
   name: {
     type: String,
@@ -18,6 +52,19 @@ taskSchema = new SimpleSchema({
     label: "Class",
     autoform:{
       type: "hidden"
+    }
+  },
+  description:{
+    type: String,
+    label:"Description",
+    optional: true
+  },
+  comments:{
+    type: [Message],
+    label: "Comments",
+    optional: true,
+    autoform:{
+      type:"hidden"
     }
   },
   classID: {
