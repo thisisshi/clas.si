@@ -35,7 +35,8 @@ taskSchema = new SimpleSchema({
     type: Date,
     label: "Due Date",
     autoform: {
-      type: "bootstrap-datepicker"
+      type: "bootstrap-datepicker",
+      timezoneId: "America/New_York"
     }
   },
   author:{
@@ -63,6 +64,9 @@ taskSchema = new SimpleSchema({
 Meteor.methods({
   deleteTask:function(id){
     Tasks.remove(id);
+  },
+  timezoneGuess:function(){
+    return moment.tz.guess();
   }
 });
 
