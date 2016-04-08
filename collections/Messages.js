@@ -1,13 +1,13 @@
 Messages = new Mongo.Collection("messages");
 
 Messages.allow({
-  insert:function(userId, doc){
+  insert: function(userId, doc) {
     return !!userId;
   },
-  update: function(userId, doc){
+  update: function(userId, doc) {
     return !!userId;
   },
-  remove: function(userId, doc){
+  remove: function(userId, doc) {
     return !!userId;
   }
 });
@@ -15,29 +15,32 @@ Messages.allow({
 MessageSchema = new SimpleSchema({
   message: {
     type: String,
-    label: "Message"
+    label: "Message",
+    autoform: {
+      class: "nostyle chat-input"
+    }
   },
-  classID:{
+  classID: {
     type: String,
     label: "classID",
     autoform: {
-      type:"hidden"
+      type: "hidden"
     }
   },
-  author:{
+  author: {
     type: String,
     label: "Author",
-    autoValue: function(){
+    autoValue: function() {
       return this.userId;
     },
     autoform: {
       type: "hidden"
     }
   },
-  createdAt:{
+  createdAt: {
     type: Date,
-    label:"Created At",
-    autoValue: function(){
+    label: "Created At",
+    autoValue: function() {
       return new Date();
     },
     autoform: {
@@ -47,7 +50,7 @@ MessageSchema = new SimpleSchema({
 });
 
 Meteor.methods({
-  deleteMessage:function(id){
+  deleteMessage: function(id) {
     Messages.remove(id);
   }
 });

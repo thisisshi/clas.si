@@ -1,54 +1,21 @@
-<template name = "ClassSingle">
-   <article class="class">
-     <h3>{{class.name}}</h3>
-     <p>Professor: <a href="mailto:{{class.professorEmail}}">{{class.professor}}</a></p>
-     <p>Meeting Dates:
-      {{#if class.meetingDates.monday}}
-      Monday
-      {{/if}}
-      {{#if class.meetingDates.tuesday}}
-      Tuesday
-      {{/if}}
-      {{#if class.meetingDates.wednesday}}
-      Wednesday
-      {{/if}}
-      {{#if class.meetingDates.thursday}}
-      Thursday
-      {{/if}}
-      {{#if class.meetingDates.friday}}
-      Friday
-      {{/if}}
+<template name="ClassSingle">
+  <article class="class">
+    <h3>{{class.name}}</h3>
+    <p>Professor: <a href="mailto:{{class.professorEmail}}">{{class.professor}}</a></p>
+    <p>Meeting Dates: {{#if class.meetingDates.monday}} Monday {{/if}} {{#if class.meetingDates.tuesday}} Tuesday {{/if}} {{#if class.meetingDates.wednesday}} Wednesday {{/if}} {{#if class.meetingDates.thursday}} Thursday {{/if}} {{#if class.meetingDates.friday}}
+      Friday {{/if}}
     </p>
-    <p>Homework is Typically Due On:
-     {{#if class.homeworkAutoDue.monday}}
-     Monday
-     {{/if}}
-     {{#if class.homeworkAutoDue.tuesday}}
-     Tuesday
-     {{/if}}
-     {{#if class.homeworkAutoDue.wednesday}}
-     Wednesday
-     {{/if}}
-     {{#if class.homeworkAutoDue.thursday}}
-     Thursday
-     {{/if}}
-     {{#if class.homeworkAutoDue.friday}}
-     Friday
-     {{/if}}
-   </p>
-     <div class="btn-group brn-group-justified btn-group-raised">
-       <a class="btn" onclick="location.href='/tasks/{{class._id}}'">Add New Task</a>
-       <a class="btn" onclick="location.href='/chat/{{class._id}}'">Your Study Group</a>
-     </div>
-   </article>
-   {{#if Template.subscriptionsReady}}
-   {{#each tasks}}
-     {{> Task}}
-     {{else}}
-     <h3>Congrats! Looks like you're all done here... or are you?</h3>
-     <h4>Add New Tasks for {{class.name}} by clicking "Add New Task" above!</h4>
-   {{/each}}
-   {{else}}
-     <p>Loading...</p>
-   {{/if}}
+    <p>Homework is Typically Due On: {{#if class.homeworkAutoDue.monday}} Monday {{/if}} {{#if class.homeworkAutoDue.tuesday}} Tuesday {{/if}} {{#if class.homeworkAutoDue.wednesday}} Wednesday {{/if}} {{#if class.homeworkAutoDue.thursday}} Thursday {{/if}}
+      {{#if class.homeworkAutoDue.friday}} Friday {{/if}}
+    </p>
+    <div class="btn-group brn-group-justified btn-group-raised">
+      <a class="btn" onclick="location.href='/tasks/{{class._id}}'">Add New Task</a>
+      <a class="btn" onclick="location.href='/chat/{{class._id}}'">Your Study Group</a>
+    </div>
+  </article>
+  {{#if Template.subscriptionsReady}} {{#each tasks}} {{> Task}} {{else}}
+  <h3>Congrats! Looks like you're all done here... or are you?</h3>
+  <h4>Add New Tasks for {{class.name}} by clicking "Add New Task" above!</h4> {{/each}} {{else}}
+  <p>Loading...</p>
+  {{/if}}
 </template>

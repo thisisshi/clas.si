@@ -1,47 +1,16 @@
-<template name = "Class">
-   <article class="class">
-     <a href="/class/{{_id}}"><h3>{{name}}</h3></a>
-     {{#if isAuthor}}
-       <i class="fa fa-trash"></i>
-     {{/if}}
-     <p>Professor: <a href="mailto:{{professorEmail}}">{{professor}}</a></p>
-     <p>Meeting Dates:
-      {{#if meetingDates.monday}}
-      Monday
-      {{/if}}
-      {{#if meetingDates.tuesday}}
-      Tuesday
-      {{/if}}
-      {{#if meetingDates.wednesday}}
-      Wednesday
-      {{/if}}
-      {{#if meetingDates.thursday}}
-      Thursday
-      {{/if}}
-      {{#if meetingDates.friday}}
-      Friday
-      {{/if}}
+<template name="Class">
+  <article class="class">
+    <a href="/class/{{_id}}"><h3>{{name}}</h3></a> {{#if isAuthor}}
+    <i class="fa fa-trash"></i> {{/if}}
+    <p>Professor: <a href="mailto:{{professorEmail}}">{{professor}}</a></p>
+    <p>Meeting Dates: {{#if meetingDates.monday}} Monday {{/if}} {{#if meetingDates.tuesday}} Tuesday {{/if}} {{#if meetingDates.wednesday}} Wednesday {{/if}} {{#if meetingDates.thursday}} Thursday {{/if}} {{#if meetingDates.friday}} Friday {{/if}}
     </p>
-    <p>Homework is Typically Due On:
-     {{#if homeworkAutoDue.monday}}
-     Monday
-     {{/if}}
-     {{#if homeworkAutoDue.tuesday}}
-     Tuesday
-     {{/if}}
-     {{#if homeworkAutoDue.wednesday}}
-     Wednesday
-     {{/if}}
-     {{#if homeworkAutoDue.thursday}}
-     Thursday
-     {{/if}}
-     {{#if homeworkAutoDue.friday}}
-     Friday
-     {{/if}}
-   </p>
-     <div class="btn-group brn-group-justified btn-group-raised">
-       <a class="btn" onclick="location.href='/tasks/{{_id}}'">Add New Task</a>
-       <a class="btn" onclick="location.href='/chat/{{_id}}'">Your Study Group</a>
-     </div>
-   </article>
+    <p>Homework is Typically Due On: {{#if homeworkAutoDue.monday}} Monday {{/if}} {{#if homeworkAutoDue.tuesday}} Tuesday {{/if}} {{#if homeworkAutoDue.wednesday}} Wednesday {{/if}} {{#if homeworkAutoDue.thursday}} Thursday {{/if}} {{#if homeworkAutoDue.friday}}
+      Friday {{/if}}
+    </p>
+    <div class="btn-group brn-group-justified btn-group-raised">
+      <a class="btn" onclick="location.href='/tasks/{{_id}}'">Add New Task</a>
+      <a class="btn" onclick="location.href='/chat/{{_id}}'">Your Study Group</a>
+    </div>
+  </article>
 </template>

@@ -1,13 +1,13 @@
 Classes = new Mongo.Collection("classes");
 
 Classes.allow({
-  insert:function(userId, doc){
+  insert: function(userId, doc) {
     return !!userId;
   },
-  update: function(userId, doc){
+  update: function(userId, doc) {
     return !!userId;
   },
-  remove: function(userId, doc){
+  remove: function(userId, doc) {
     return !!userId;
   }
 });
@@ -16,36 +16,36 @@ MeetingDates = new SimpleSchema({
   monday: {
     type: Boolean,
     label: "Monday",
-    autoform:{
-      class:"checkbox"
+    autoform: {
+      class: "checkbox"
     }
   },
   tuesday: {
     type: Boolean,
     label: "Tuesday",
-    autoform:{
-      class:"checkbox"
+    autoform: {
+      class: "checkbox"
     }
   },
-  wednesday:{
+  wednesday: {
     type: Boolean,
     label: "Wednesday",
-    autoform:{
-      class:"checkbox"
+    autoform: {
+      class: "checkbox"
     }
   },
-  thursday:{
+  thursday: {
     type: Boolean,
     label: "Thursday",
-    autoform:{
-      class:"checkbox"
+    autoform: {
+      class: "checkbox"
     }
   },
-  friday:{
+  friday: {
     type: Boolean,
     label: "Friday",
-    autoform:{
-      class:"checkbox"
+    autoform: {
+      class: "checkbox"
     }
   }
 });
@@ -54,42 +54,42 @@ homeworkAutoDue = new SimpleSchema({
   monday: {
     type: Boolean,
     label: "Monday",
-    autoform:{
-      class:"checkbox"
+    autoform: {
+      class: "checkbox"
     }
   },
   tuesday: {
     type: Boolean,
     label: "Tuesday",
-    autoform:{
-      class:"checkbox"
+    autoform: {
+      class: "checkbox"
     }
   },
-  wednesday:{
+  wednesday: {
     type: Boolean,
     label: "Wednesday",
-    autoform:{
-      class:"checkbox"
+    autoform: {
+      class: "checkbox"
     }
   },
-  thursday:{
+  thursday: {
     type: Boolean,
     label: "Thursday",
-    autoform:{
-      class:"checkbox"
+    autoform: {
+      class: "checkbox"
     }
   },
-  friday:{
+  friday: {
     type: Boolean,
     label: "Friday",
-    autoform:{
-      class:"checkbox"
+    autoform: {
+      class: "checkbox"
     }
   }
 });
 
 Members = new SimpleSchema({
-  email:{
+  email: {
     type: String,
     label: "Email"
   }
@@ -104,7 +104,7 @@ ClassSchema = new SimpleSchema({
     type: String,
     label: "Professor Name"
   },
-  professorEmail:{
+  professorEmail: {
     type: String,
     label: "Professor Email",
     regEx: SimpleSchema.RegEx.Email
@@ -112,34 +112,34 @@ ClassSchema = new SimpleSchema({
   meetingDates: {
     type: MeetingDates,
     label: "Class Meeting Days",
-    autoform:{
+    autoform: {
       class: "checkbox"
     }
   },
   members: {
     type: [Members],
-    autoform:{
-      class:"form-group-full"
+    autoform: {
+      class: "form-group-full"
     }
   },
   hwDueDay: {
     type: homeworkAutoDue,
     label: "Homework Is Typically Due On:"
   },
-  author:{
+  author: {
     type: String,
     label: "Author",
-    autoValue: function(){
+    autoValue: function() {
       return this.userId;
     },
     autoform: {
       type: "hidden"
     }
   },
-  createdAt:{
+  createdAt: {
     type: Date,
-    label:"Created At",
-    autoValue: function(){
+    label: "Created At",
+    autoValue: function() {
       return new Date();
     },
     autoform: {
@@ -149,7 +149,7 @@ ClassSchema = new SimpleSchema({
 });
 
 Meteor.methods({
-  deleteClass:function(id){
+  deleteClass: function(id) {
     Classes.remove(id);
   }
 });

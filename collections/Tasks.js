@@ -1,9 +1,10 @@
 Tasks = new Mongo.Collection("tasks");
 
 Tasks.allow({
-  insert:function(userId, doc){
+  insert: function(userId, doc) {
     return !!userId;
-  }, remove:function(userId, doc){
+  },
+  remove: function(userId, doc) {
     return !!userId;
   }
 });
@@ -13,27 +14,27 @@ Message = new SimpleSchema({
     type: String,
     label: "Message"
   },
-  classID:{
+  classID: {
     type: String,
     label: "classID",
     autoform: {
-      type:"hidden"
+      type: "hidden"
     }
   },
-  author:{
+  author: {
     type: String,
     label: "Author",
-    autoValue: function(){
+    autoValue: function() {
       return this.userId;
     },
     autoform: {
       type: "hidden"
     }
   },
-  createdAt:{
+  createdAt: {
     type: Date,
-    label:"Created At",
-    autoValue: function(){
+    label: "Created At",
+    autoValue: function() {
       return new Date();
     },
     autoform: {
@@ -49,22 +50,22 @@ taskSchema = new SimpleSchema({
   },
   class: {
     type: String,
-    label: "Class",
-    autoform:{
-      type: "hidden"
-    }
+      label: "Class",
+      autoform: {
+        type: "hidden"
+      }
   },
-  description:{
+  description: {
     type: String,
-    label:"Description",
+    label: "Description",
     optional: true
   },
-  comments:{
+  comments: {
     type: [Message],
     label: "Comments",
     optional: true,
-    autoform:{
-      type:"hidden"
+    autoform: {
+      type: "hidden"
     }
   },
   classID: {
@@ -86,20 +87,20 @@ taskSchema = new SimpleSchema({
       timezoneId: "America/New_York"
     }
   },
-  author:{
+  author: {
     type: String,
     label: "Author",
-    autoValue: function(){
+    autoValue: function() {
       return this.userId;
     },
     autoform: {
       type: "hidden"
     }
   },
-  createdAt:{
+  createdAt: {
     type: Date,
-    label:"Created At",
-    autoValue: function(){
+    label: "Created At",
+    autoValue: function() {
       return new Date();
     },
     autoform: {
@@ -109,10 +110,10 @@ taskSchema = new SimpleSchema({
 });
 
 Meteor.methods({
-  deleteTask:function(id){
+  deleteTask: function(id) {
     Tasks.remove(id);
   },
-  timezoneGuess:function(){
+  timezoneGuess: function() {
     return moment.tz.guess();
   }
 });

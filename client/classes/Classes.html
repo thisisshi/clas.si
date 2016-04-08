@@ -1,16 +1,10 @@
 <template name="Classes">
   <section class="classes">
-    {{#if Template.subscriptionsReady}}
-      {{#each classes}}
-        {{> Class}}
-      {{/each}}
-    {{else}}
-      <p>Loading...</p>
+    {{#if Template.subscriptionsReady}} {{#each classes}} {{> Class}} {{/each}} {{else}}
+    <p>Loading...</p>
     {{/if}}
   </section>
-  {{#if $.Session.get 'newClass'}}
-    {{> NewClass}}
-  {{else}}
-    <button class="btn btn-raised btn-primary" onclick="location.href='/class/new'">New Class</button>
+  {{#if $.Session.get 'newClass'}} {{> NewClass}} {{else}}
+  <button class="btn btn-raised btn-primary" onclick="location.href='/class/new'">New Class</button>
   {{/if}}
 </template>

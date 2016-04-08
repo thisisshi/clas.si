@@ -4,6 +4,10 @@
     {{> quickForm collection="Tasks" id="insertTasksform" type="insert" class="new-task-form"}}
   </div>
   <script>
-    var x = document.getElementByName('class').value={{class.name}};
+    var x = document.getElementByName('class').value = {
+      {
+        class.name
+      }
+    };
   </script>
 </template>

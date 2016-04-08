@@ -1,17 +1,21 @@
 Template.ClassSingle.helpers({
-  class: ()=> {
+  class: () => {
     var id = FlowRouter.getParam('id');
-    return Classes.findOne({_id: id});
+    return Classes.findOne({
+      _id: id
+    });
   },
-  tasks: ()=> {
+  tasks: () => {
     var id = FlowRouter.getParam('id');
-    return Tasks.find({classID: id});
+    return Tasks.find({
+      classID: id
+    });
   }
 });
 
-Template.ClassSingle.onCreated(function(){
+Template.ClassSingle.onCreated(function() {
   var self = this;
-  self.autorun(function(){
+  self.autorun(function() {
     var id = FlowRouter.getParam('id');
     self.subscribe('singleClass', id);
     self.subscribe('classTasks', id);
