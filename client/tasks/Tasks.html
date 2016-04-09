@@ -1,9 +1,20 @@
 <template name="Tasks">
   <section class="tasks">
+    <h4>Tasks</h4>
     {{#if Template.subscriptionsReady}} {{#each tasks}} {{> Task}} {{else}}
     <h2>Congrats! Looks like you're all done here... or are you?</h2>
     <h3>Add New Tasks from your <a href="/classes">Classes</a>!</h3> {{/each}} {{else}}
     <p>Loading...</p>
     {{/if}}
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">add</i>
+    </a>
+    <ul>
+      {{#each classes}}
+        <li><a class="btn-floating green" href="tasks/{{_id}}" title="{{name}}"><i class="material-icons">add</i></a>{{name}}</li>
+      {{/each}}
+    </ul>
+  </div>
   </section>
 </template>

@@ -8,11 +8,10 @@
     <p>Homework is Typically Due On: {{#if class.hwDueDay.monday}} Monday {{/if}} {{#if class.hwDueDay.tuesday}} Tuesday {{/if}} {{#if class.hwDueDay.wednesday}} Wednesday {{/if}} {{#if class.hwDueDay.thursday}} Thursday {{/if}}
       {{#if class.hwDueDay.friday}} Friday {{/if}}
     </p>
-    <div class="btn-group brn-group-justified btn-group-raised">
-      <a class="btn" onclick="location.href='/tasks/{{class._id}}'">Add New Task</a>
-      <a class="btn" onclick="location.href='/chat/{{class._id}}'">Your Study Group</a>
-    </div>
+    <a class="waves-effect waves-light btn" href='/tasks/{{class_id}}' style="color:#fff"><i class="material-icons left">add</i>Add Task</a>
+    <a class="waves-effect waves-light btn" href='/chat/{{class._id}}' style="color:#fff"><i class="material-icons left">group</i>{{class.name}} Study Group</a>
   </article>
+  <hr />
   {{#if Template.subscriptionsReady}} {{#each tasks}} {{> Task}} {{else}}
   <h3>Congrats! Looks like you're all done here... or are you?</h3>
   <h4>Add New Tasks for {{class.name}} by clicking "Add New Task" above!</h4> {{/each}} {{else}}

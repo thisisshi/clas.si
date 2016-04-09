@@ -5,6 +5,9 @@ Template.Tasks.helpers({
         dueDate: 1
       }
     });
+  },
+  classes: () =>{
+    return Classes.find({});
   }
 });
 Template.Tasks.onCreated(function() {
@@ -13,5 +16,6 @@ Template.Tasks.onCreated(function() {
     var user = Meteor.user();
     var email = user.emails[0].address;
     self.subscribe('tasks', email);
+    self.subscribe('classes', email);
   });
 });
