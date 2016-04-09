@@ -1,14 +1,5 @@
 <template name="Header">
   <header>
     <a href="/" style="color: #fff"><h1>clas.si</h1></a>
-    <div class="top-right">
-      {{#if currentUser}}
-      <div class="logout login-buttons-dropdown-align-float header-height">
-        <a href="#" class="btn btn-link btn-default header-height" style="color:#fff">Logout</a>
-      </div>
-      {{else}}
-      <div class="login-buttons-dropdown-align-float"> <a href="/register" class="btn btn-raised btn-primary btn-sm header-height">Register</a><a href="/login" class="btn btn-raised btn-sm header-height">Login</a> </div>
-      {{/if}}
-    </div>
   </header>
 </template>

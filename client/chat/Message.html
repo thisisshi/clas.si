@@ -1,6 +1,6 @@
 <Template name="Message">
   <article class="card" id={{_id}}>
-    <p class="sender">{{getUserEmail author}} <a class="timestamp" href="#{{_id}}">{{momentFormat createdAt}}</a></p>
+    <p class="sender">{{getUserEmail author}} <a class="timestamp" href="#{{_id}}" title={{timeStampFormat createdAt}} >{{momentFormat createdAt}}</a></p>
     <hr />
     <p>{{message}}</p>
   </article>

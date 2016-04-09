@@ -41,3 +41,6 @@ aldeed:autoform-bs-datepicker
 useraccounts:materialize
 momentjs:moment
 mrt:moment-timezone
+gildaspk:autoform-materialize
+materialize:materialize
+poetic:materialize-scss

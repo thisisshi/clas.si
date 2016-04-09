@@ -7,6 +7,9 @@ Template.Message.helpers({
   },
   momentFormat: function(time) {
       return moment(time).fromNow();
+  },
+  timeStampFormat: function(time) {
+      return moment(time).format("MMM DD YYYY HH:mm");
   }
 
 });
