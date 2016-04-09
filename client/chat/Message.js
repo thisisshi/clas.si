@@ -7,5 +7,11 @@ Template.Message.helpers({
   },
   momentFormat: function(time) {
       return moment(time).fromNow();
-  },
+  }
+});
+Template.Message.onRendered(function(){
+  var self=this;
+  self.autorun(function(){
+    window.scrollTo(0,document.body.scrollHeight);
+  })
 });

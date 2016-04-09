@@ -1,5 +1,5 @@
 <template name="ClassSingle">
-  <article class="class">
+  <article class="card">
     <h3>{{class.name}}</h3>
     <p>Professor: <a href="mailto:{{class.professorEmail}}">{{class.professor}}</a></p>
     <p>Meeting Dates: {{#if class.meetingDates.monday}} Monday {{/if}} {{#if class.meetingDates.tuesday}} Tuesday {{/if}} {{#if class.meetingDates.wednesday}} Wednesday {{/if}} {{#if class.meetingDates.thursday}} Thursday {{/if}} {{#if class.meetingDates.friday}}
