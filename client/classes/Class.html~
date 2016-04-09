@@ -1,0 +1,15 @@
+<template name="Class">
+  <article class="card">
+    <a href="/class/{{_id}}"><h4>{{name}}</h4></a> {{#if isAuthor}}
+    <i class="fa fa-trash"></i> {{/if}}
+    <p>Professor: <a href="mailto:{{professorEmail}}">{{professor}}</a></p>
+    <p>Meeting Dates: {{#if meetingDates.monday}} Monday {{/if}} {{#if meetingDates.tuesday}} Tuesday {{/if}} {{#if meetingDates.wednesday}} Wednesday {{/if}} {{#if meetingDates.thursday}} Thursday {{/if}} {{#if meetingDates.friday}} Friday {{/if}}
+    </p>
+    <p>Homework is Typically Due On: {{#if hwDueDay.monday}} Monday {{/if}} {{#if hwDueDay.tuesday}} Tuesday {{/if}} {{#if hwDueDay.wednesday}} Wednesday {{/if}} {{#if hwDueDay.thursday}} Thursday {{/if}} {{#if hwDueDay.friday}}
+      Friday {{/if}}
+    </p>
+    <a class="waves-effect waves-light btn" href='/tasks/{{_id}}' style="color:#fff">Add Task</a>
+    <a class="waves-effect waves-light btn" href='/chat/{{_id}}' style="color:#fff"><i class="material-icons left">group</i>{{name}} Study Group</a>
+  </article>
+
+</template>
