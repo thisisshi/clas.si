@@ -5,8 +5,8 @@
     <p>Meeting Dates: {{#if class.meetingDates.monday}} Monday {{/if}} {{#if class.meetingDates.tuesday}} Tuesday {{/if}} {{#if class.meetingDates.wednesday}} Wednesday {{/if}} {{#if class.meetingDates.thursday}} Thursday {{/if}} {{#if class.meetingDates.friday}}
       Friday {{/if}}
     </p>
-    <p>Homework is Typically Due On: {{#if class.homeworkAutoDue.monday}} Monday {{/if}} {{#if class.homeworkAutoDue.tuesday}} Tuesday {{/if}} {{#if class.homeworkAutoDue.wednesday}} Wednesday {{/if}} {{#if class.homeworkAutoDue.thursday}} Thursday {{/if}}
-      {{#if class.homeworkAutoDue.friday}} Friday {{/if}}
+    <p>Homework is Typically Due On: {{#if class.hwDueDay.monday}} Monday {{/if}} {{#if class.hwDueDay.tuesday}} Tuesday {{/if}} {{#if class.hwDueDay.wednesday}} Wednesday {{/if}} {{#if class.hwDueDay.thursday}} Thursday {{/if}}
+      {{#if class.hwDueDay.friday}} Friday {{/if}}
     </p>
     <div class="btn-group brn-group-justified btn-group-raised">
       <a class="btn" onclick="location.href='/tasks/{{class._id}}'">Add New Task</a>
