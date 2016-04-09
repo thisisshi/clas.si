@@ -1,6 +1,7 @@
 <Template name="Message">
-  <article class="class">
-    <p>From: {{getUserEmail author}}</p>
+  <article class="class insertMessage" id={{_id}}>
+    <p class="sender">{{getUserEmail author}} <a class="timestamp" href="#{{_id}}">{{momentFormat createdAt}}</a></p>
+    <hr />
     <p>{{message}}</p>
   </article>
 </Template>

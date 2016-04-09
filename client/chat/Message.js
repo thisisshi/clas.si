@@ -4,5 +4,8 @@ Template.Message.helpers({
       _id: userId
     });
     return messageAuthor.emails[0].address;
-  }
+  },
+  momentFormat: function(time) {
+      return moment(time).fromNow();
+  },
 });
