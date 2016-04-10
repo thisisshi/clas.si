@@ -75,7 +75,7 @@ html
 
 body
   background light-grey
-  padding: 70px 0 150px
+  padding: 60px 0 150px
 
 header
   color #FFF
@@ -84,7 +84,7 @@ header
   text-align:center
   fixed top left
   width 100%
-  height 70px
+  height 60px
   z-index: z.header
   shadow-level(2)
   clearfix()
@@ -209,7 +209,7 @@ p
 
 .side-nav
   fixed top left
-  height:70px
+  height:60px
   width 100%
   overflow hidden
   background #27ae60
@@ -247,6 +247,19 @@ p
 ::-moz-selection {
   background: #2ecc71; /* Gecko Browsers */
 }
+
+ul
+  li
+    padding-left: 0px
+    padding-right: 0px
+    padding-top:0px
+    padding-bottom:0px
+    &:hover
+      background-color:#2ecc71
+    a
+      &:hover
+        background-color:#2ecc71
+
 
 .btn
   color:#fff
