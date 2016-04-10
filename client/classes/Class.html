@@ -1,7 +1,11 @@
 <template name="Class">
   <article class="card">
-    <a href="/class/{{_id}}"><h4>{{name}}</h4></a> {{#if isAuthor}}
-    <i class="fa fa-trash"></i> {{/if}}
+    <a href="/class/{{_id}}"><h4>{{name}}</h4></a>
+    {{#if isAuthor}}
+      <i class="fa fa-trash-o" title="Delete Class"></i>
+    {{else}}
+      <i class="fa fa-trash" title="Remove Class From My Classes"></i>
+    {{/if}}
     <p>Professor: <a href="mailto:{{professorEmail}}">{{professor}}</a></p>
     <p>Meeting Dates: {{#if meetingDates.monday}} Monday {{/if}} {{#if meetingDates.tuesday}} Tuesday {{/if}} {{#if meetingDates.wednesday}} Wednesday {{/if}} {{#if meetingDates.thursday}} Thursday {{/if}} {{#if meetingDates.friday}} Friday {{/if}}
     </p>

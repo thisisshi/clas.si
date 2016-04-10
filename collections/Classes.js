@@ -151,6 +151,9 @@ ClassSchema = new SimpleSchema({
 Meteor.methods({
   deleteClass: function(id) {
     Classes.remove(id);
+  },
+  removeFromClass : function(id, userEmail) {
+    Classes.update(id, {$pull:{members: {email: userEmail}}});
   }
 });
 

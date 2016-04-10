@@ -1,7 +1,7 @@
 <template name="Task">
   <article class="card {{#if highPriority}}highPriority{{/if}}">
     <a href="/task/{{_id}}"><h4>{{name}}</h4></a>
-    <i class="fa fa-trash"></i>
+    <i class="fa fa-trash-o" title="Delete Task"></i>
     <p>{{class}} - Due {{momentFormat dueDate}}</p>
   </article>
 </template>

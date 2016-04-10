@@ -1,6 +1,12 @@
 Template.Class.events({
-  'click .fa-trash': function() {
+  'click .fa-trash-o': function() {
     Meteor.call('deleteClass', this._id);
+  },
+  'click .fa-trash': function(){
+    var user = Meteor.user();
+    var email = user.emails[0].address;
+    console.log(email);
+    Meteor.call('removeFromClass', this._id, email)
   }
 })
 
@@ -8,7 +14,6 @@ Template.Class.helpers({
   isAuthor: function() {
     var user = Meteor.user();
     var id = user._id;
-    console.log(id);
     return this.author === id;
   }
 })
