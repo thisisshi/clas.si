@@ -27,6 +27,7 @@ Template.Chat.onCreated(function() {
 
 Template.Chat.onRendered(function(){
   var self=this;
+  window.scrollTo(0,document.body.scrollHeight);
   $(window).resize(function(){
     function fixDiv() {
         var $cache = $('.new-message-container');
@@ -40,7 +41,6 @@ Template.Chat.onRendered(function(){
     fixDiv();
   });
   self.autorun(function(){
-    window.scrollTo(0,document.body.scrollHeight);
     function fixDiv() {
         var $cache = $('.new-message-container');
         var $width = $('.main-layout').width();
