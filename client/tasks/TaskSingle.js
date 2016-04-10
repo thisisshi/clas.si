@@ -20,3 +20,10 @@ Template.TaskSingle.onCreated(function() {
     self.subscribe('singleTask', id);
   });
 });
+Template.TaskSingle.events({
+  'click .fa-trash-o': function() {
+    var id = FlowRouter.getParam('id');
+    Meteor.call('deleteTask', id);
+    window.location = "/"
+  }
+})
