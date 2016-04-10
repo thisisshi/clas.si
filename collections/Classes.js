@@ -91,7 +91,12 @@ homeworkAutoDue = new SimpleSchema({
 Members = new SimpleSchema({
   email: {
     type: String,
-    label: "Email"
+    label: "Email",
+    autoValue: function(){
+      if(this.isSet && typeof this.value ==="string"){
+        return this.value.toLowerCase();
+      }
+    }
   }
 });
 

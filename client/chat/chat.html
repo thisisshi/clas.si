@@ -1,9 +1,22 @@
 <Template name="Chat">
   <div class="messages">
     <section>
-      {{#if Template.subscriptionsReady}} {{#each messages}} {{> Message}} {{/each}} {{else}}
-      <p>Loading...</p>
-      {{/if}}
+      <div class="new-card-container">
+        <p class="sender">clas.si <a class="timestamp" href="#" title="{{timeStampFormat class.createdAt}}" >{{momentFormat class.createdAt}}</a></p>
+        <hr />
+        <p>Welcome to your new Study Group for <a href="/class/{{class._id}}">{{class.name}}</a>!</p>
+      </div>
+
+        {{#if messages}}
+          {{#if Template.subscriptionsReady}}
+            {{#each messages}}
+              {{> Message}}
+            {{/each}}
+          {{else}}
+            <p>Loading...</p>
+          {{/if}}
+        {{else}}
+        {{/if}}
     </section>
   </div>
   <div class="footer-new-message">

@@ -13,8 +13,8 @@
   </article>
   <hr />
   {{#if Template.subscriptionsReady}} {{#each tasks}} {{> Task}} {{else}}
-  <h3>Congrats! Looks like you're all done here... or are you?</h3>
-  <h4>Add New Tasks for {{class.name}} by clicking "Add New Task" above!</h4> {{/each}} {{else}}
+  <h5>Congrats! Looks like you're all done here... or are you?</h5>
+  <p>Add New Tasks for {{class.name}} by clicking "Add New Task" above!</p> {{/each}} {{else}}
   <p>Loading...</p>
   {{/if}}
 </template>

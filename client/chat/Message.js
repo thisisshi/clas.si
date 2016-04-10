@@ -13,31 +13,3 @@ Template.Message.helpers({
   }
 
 });
-Template.Message.onRendered(function(){
-  var self=this;
-  $(window).resize(function(){
-    function fixDiv() {
-        var $cache = $('.new-message-container');
-        var $width = $('.main-layout').width();
-        console.log("Main-Layout: " + $width);
-        $cache.css({
-            'position': 'fixed',
-            'width': $width
-        });
-    }
-    fixDiv();
-  });
-  self.autorun(function(){
-    window.scrollTo(0,document.body.scrollHeight);
-    function fixDiv() {
-        var $cache = $('.new-message-container');
-        var $width = $('.main-layout').width();
-        console.log("Main-Layout: " + $width);
-        $cache.css({
-            'position': 'fixed',
-            'width': $width
-        });
-    }
-    fixDiv();
-    });
-});
