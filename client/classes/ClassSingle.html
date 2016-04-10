@@ -1,16 +1,7 @@
 <template name="ClassSingle">
-  <article class="card">
-    <h3>{{class.name}}</h3>
-    <p>Professor: <a href="mailto:{{class.professorEmail}}">{{class.professor}}</a></p>
-    <p>Meeting Dates: {{#if class.meetingDates.monday}} Monday {{/if}} {{#if class.meetingDates.tuesday}} Tuesday {{/if}} {{#if class.meetingDates.wednesday}} Wednesday {{/if}} {{#if class.meetingDates.thursday}} Thursday {{/if}} {{#if class.meetingDates.friday}}
-      Friday {{/if}}
-    </p>
-    <p>Homework is Typically Due On: {{#if class.hwDueDay.monday}} Monday {{/if}} {{#if class.hwDueDay.tuesday}} Tuesday {{/if}} {{#if class.hwDueDay.wednesday}} Wednesday {{/if}} {{#if class.hwDueDay.thursday}} Thursday {{/if}}
-      {{#if class.hwDueDay.friday}} Friday {{/if}}
-    </p>
-    <a class="waves-effect waves-light btn" href='/tasks/{{class_id}}' style="color:#fff"><i class="material-icons left">add</i>Add Task</a>
-    <a class="waves-effect waves-light btn" href='/chat/{{class._id}}' style="color:#fff"><i class="material-icons left">group</i>{{class.name}} Study Group</a>
-  </article>
+  {{#if Template.subscriptionsReady}} {{#each classes}} {{> Class}} {{/each}} {{else}}
+  <p>Loading...</p>
+  {{/if}}
   <hr />
   {{#if Template.subscriptionsReady}} {{#each tasks}} {{> Task}} {{else}}
   <h5>Congrats! Looks like you're all done here... or are you?</h5>

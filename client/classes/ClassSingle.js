@@ -1,9 +1,7 @@
 Template.ClassSingle.helpers({
-  class: () => {
+  classes: () => {
     var id = FlowRouter.getParam('id');
-    return Classes.findOne({
-      _id: id
-    });
+    return Classes.find({_id: id});
   },
   tasks: () => {
     var id = FlowRouter.getParam('id');

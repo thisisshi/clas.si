@@ -1,12 +1,10 @@
 <template name="TaskSingle">
-  <article class="card">
-    <h3>{{task.name}}</h3>
-    <h5>{{task.class}}</h5>
-    <p>
-      Due {{momentFormat task.dueDate}}
-    </p>
-    <blockquote>
-      {{task.description}}
-    </blockquote>
+  <article class="card {{#if highPriority}}highPriority{{/if}}">
+    <i class="fa fa-trash-o" title="Delete Task"></i>
+    <div class="card-content">
+      <span class="card-title" style="text-align: left; word-wrap: break-word"><h4>{{task.name}}</h4></span>
+      <p>{{task.class}} - Due {{momentFormat task.dueDate}}</p>
+      <blockquote>{{task.description}}</blockquote>
+    </div>
   </article>
 </template>
