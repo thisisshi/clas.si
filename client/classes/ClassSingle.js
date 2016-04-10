@@ -8,6 +8,9 @@ Template.ClassSingle.helpers({
     return Tasks.find({
       classID: id
     });
+  },
+  getClassID: function(){
+    return FlowRouter.getParam('id');
   }
 });
 

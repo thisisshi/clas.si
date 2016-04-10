@@ -3,9 +3,26 @@
   <p>Loading...</p>
   {{/if}}
   <hr />
-  {{#if Template.subscriptionsReady}} {{#each tasks}} {{> Task}} {{else}}
-  <h5>Congrats! Looks like you're all done here... or are you?</h5>
-  <p>Add New Tasks for {{class.name}} by clicking "Add New Task" above!</p> {{/each}} {{else}}
-  <p>Loading...</p>
-  {{/if}}
+  <section class="tasks">
+    <h4>Tasks</h4>
+    <div class="row">
+      {{#if Template.subscriptionsReady}}
+        {{#each tasks}}
+          <div class="col s12 m6 l4">
+            {{> Task}}
+          </div>
+        {{else}}
+        <h5>Congrats! Looks like you're all done here... or are you?</h5>
+        <p>Add New Tasks from your <a href="/classes">Classes</a>!</p>
+        {{/each}}
+      {{else}}
+        <p>Loading...</p>
+      {{/if}}
+    </div>
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large pink" href = "/tasks/{{getClassID}}">
+      <i class="large material-icons">add</i>
+    </a>
+  </div>
+  </section>
 </template>

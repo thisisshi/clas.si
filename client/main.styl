@@ -43,6 +43,8 @@ maroon = #6A2140
 light-red = #CA5765
 pink = #CF256D
 orange = #E8846B
+classi = #0288D1
+priority = #03A9F4
 
 z = {
   neg: -7,
@@ -79,7 +81,7 @@ body
 
 header
   color #FFF
-  background: #27ae60
+  background: classi
   padding 20px
   text-align:center
   fixed top left
@@ -161,7 +163,7 @@ p
   margin-bottom 30px
 
 .billboard
-  background-color: #27ae60
+  background-color: classi
   background-size:cover;
   color #FFF
   font-size 2em
@@ -214,7 +216,7 @@ p
   height:60px
   width 100%
   overflow hidden
-  background #27ae60
+  background classi
   color #FFF
   z-index: z.header
   ul
@@ -244,19 +246,19 @@ p
     shadow-level(-1)
 
 ::selection {
-  background: #2ecc71; /* WebKit/Blink Browsers */
+  background: classi; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: #2ecc71; /* Gecko Browsers */
+  background: classi; /* Gecko Browsers */
 }
 
 ul
   .li-nav
     &:hover
-      background-color:#2ecc71
+      background-color:classi
     a
       &:hover
-        background-color:#2ecc71
+        background-color:classi
 
 
 .btn
@@ -278,7 +280,7 @@ a
   .btn-primary, .btn-deny
     display block
   &.highPriority
-    background red
+    background priority
     p
       color #FFF
     a
