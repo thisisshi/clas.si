@@ -83,7 +83,7 @@ taskSchema = new SimpleSchema({
     type: Date,
     label: "Due Date",
     autoform: {
-      type: "bootstrap-datepicker"
+      type: "pickadate"
     }
   },
   author: {

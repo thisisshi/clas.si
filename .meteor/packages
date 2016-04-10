@@ -34,9 +34,6 @@ meteortoys:allthings
 zimme:active-route
 gwendall:auth-client-callbacks
 check
-twbs:bootstrap
-rajit:bootstrap3-datepicker
-aldeed:autoform-bs-datepicker
 momentjs:moment
 mrt:moment-timezone
 gildaspk:autoform-materialize
