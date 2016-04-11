@@ -2,6 +2,9 @@ Template.Class.events({
   'click .fa-trash-o': function() {
     Meteor.call('deleteClass', this._id);
   },
+  'click .fa-pencil': function() {
+    Session.set('editMode', !Session.get('editMode'));
+  },
   'click .fa-trash': function(){
     var user = Meteor.user();
     var email = user.emails[0].address;
@@ -15,5 +18,8 @@ Template.Class.helpers({
     var user = Meteor.user();
     var id = user._id;
     return this.author === id;
+  },
+  updateClassId: function(){
+    return this._id
   }
 })

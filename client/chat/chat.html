@@ -1,5 +1,5 @@
 <Template name="Chat">
-  <div class="messages">
+  <div class="messages container">
     <section>
       {{#if Template.subscriptionsReady}}
         {{#each messages}}
@@ -16,7 +16,7 @@
       {{/if}}
     </section>
   </div>
-  <div class="footer-new-message">
+  <div class="footer-new-message container">
     <div class="new-message-container">
       {{> quickForm collection="Messages" id="NewMessage" type="insert" class="new-message-form"}}
     </div>

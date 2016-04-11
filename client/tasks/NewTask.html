@@ -1,7 +1,11 @@
 <template name="NewTask">
-  <h1>New Task for {{class.name}}</h1>
-  <div class="new-card-container">
-    {{> quickForm collection="Tasks" id="insertTasksform" type="insert" class="new-task-form"}}
+  <div class="container">
+    <div class="card">
+      <h5>New Task for {{class.name}}</h5>
+      <div class="new-card-container">
+        {{> quickForm collection="Tasks" id="insertTasksform" type="insert" class="new-task-form"}}
+      </div>
+    </div>
   </div>
   <script>
     var x = document.getElementByName('class').value = {

@@ -10,7 +10,7 @@ Template.Tasks.helpers({
     return Classes.find({});
   }
 });
-Template.Tasks.onCreated(function() {
+Template.Tasks.onRendered(function() {
   var self = this;
   self.autorun(function() {
     var user = Meteor.user();

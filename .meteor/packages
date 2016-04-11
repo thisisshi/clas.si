@@ -17,6 +17,7 @@ standard-minifier-js    # JS minifier run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
+session
 kadira:flow-router
 kadira:blaze-layout
 erasaur:meteor-lodash
@@ -30,6 +31,7 @@ aldeed:autoform
 accounts-ui
 accounts-password
 matb33:bootstrap-glyphicons
+msavin:jetsetter
 meteortoys:allthings
 zimme:active-route
 gwendall:auth-client-callbacks

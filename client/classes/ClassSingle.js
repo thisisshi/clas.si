@@ -14,7 +14,7 @@ Template.ClassSingle.helpers({
   }
 });
 
-Template.ClassSingle.onCreated(function() {
+Template.ClassSingle.onRendered(function() {
   var self = this;
   self.autorun(function() {
     var id = FlowRouter.getParam('id');

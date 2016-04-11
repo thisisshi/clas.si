@@ -1,5 +1,27 @@
 <template name="HeaderChat">
-  <header>
-    <a href="/class/{{class._id}}" style="color: #fff"><h1>{{class.name}} Study Group</h1></a>
-  </header>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="container">
+        <a href="/class/{{class._id}}" class="brand-logo">{{class.name}}</a>
+        <a href="#" data-activates="side" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/tasks">Tasks</a></li>
+          <li><a href="/classes">Classes</a></li>
+          <li><a href="/settings">Settings</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+        <ul class="side-nav" id="side">
+          <li><a href="/tasks">Tasks</a></li>
+          <li><a href="/classes">Classes</a></li>
+          <li><a href="/settings">Settings</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <script>
+    $(".button-collapse").sideNav();
+  </script>
 </template>

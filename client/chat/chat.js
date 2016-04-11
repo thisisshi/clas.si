@@ -16,15 +16,6 @@ Template.Chat.helpers({
   }
 });
 
-Template.Chat.onCreated(function() {
-  var self = this;
-  self.autorun(function() {
-    var id = FlowRouter.getParam('id');
-    self.subscribe('messages', id);
-    self.subscribe('singleClass',id)
-  });
-});
-
 Template.Chat.onRendered(function(){
   var self=this;
   window.scrollTo(0,document.body.scrollHeight);
@@ -38,9 +29,12 @@ Template.Chat.onRendered(function(){
             'width': $width
         });
     }
-    fixDiv();
   });
   self.autorun(function(){
+    var id = FlowRouter.getParam('id');
+    self.subscribe('messages', id);
+    self.subscribe('singleClass',id)
+
     function fixDiv() {
         var $cache = $('.new-message-container');
         var $width = $('.main-layout').width();
@@ -50,6 +44,5 @@ Template.Chat.onRendered(function(){
             'width': $width
         });
     }
-    fixDiv();
     });
 });

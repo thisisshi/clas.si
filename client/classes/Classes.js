@@ -4,7 +4,7 @@ Template.Classes.helpers({
   }
 });
 
-Template.Classes.onCreated(function() {
+Template.Classes.onRendered(function() {
   var self = this;
   self.autorun(function() {
     var user = Meteor.user();

@@ -13,7 +13,7 @@ Template.TaskSingle.helpers({
     }
   },
 });
-Template.TaskSingle.onCreated(function() {
+Template.TaskSingle.onRendered(function() {
   var self = this;
   self.autorun(function() {
     var id = FlowRouter.getParam('id');

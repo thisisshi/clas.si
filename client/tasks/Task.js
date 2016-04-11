@@ -1,6 +1,10 @@
 Template.Task.events({
   'click .fa-trash-o': function() {
     Meteor.call('deleteTask', this._id);
+  },
+  'click .fa-pencil' : function(){
+    console.log("hello");
+    Session.set('editMode', !Session.get('editMode'));
   }
 })
 Template.Task.helpers({
@@ -11,8 +15,11 @@ Template.Task.helpers({
       return moment(time).add(5, 'hour').format("MM-DD-YYYY");
     }
   },
+  updateTaskId: function() {
+    return this._id;
+  }
 });
-Template.Task.onCreated(function() {
+Template.Task.onRendered(function() {
   var self = this;
   self.autorun(function() {
     var user = Meteor.user();
