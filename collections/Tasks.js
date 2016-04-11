@@ -81,10 +81,7 @@ taskSchema = new SimpleSchema({
   },
   dueDate: {
     type: Date,
-    label: "Due Date",
-    autoform: {
-      type: "pickadate"
-    }
+    label: "Due Date"
   },
   author: {
     type: String,

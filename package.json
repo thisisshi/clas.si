@@ -5,6 +5,8 @@
     "start": "meteor run"
   },
   "dependencies": {
+    "hammerjs": "^2.0.6",
+    "jquery": "^2.2.3",
     "meteor-node-stubs": "~0.2.0"
   }
 }
