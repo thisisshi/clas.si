@@ -31,7 +31,6 @@ aldeed:autoform
 accounts-ui
 accounts-password
 matb33:bootstrap-glyphicons
-msavin:jetsetter
 meteortoys:allthings
 zimme:active-route
 gwendall:auth-client-callbacks
@@ -42,4 +41,3 @@ gildaspk:autoform-materialize
 dapearce:material-icons
 planettraining:material-design-icons
 useraccounts:materialize
-mrt:jquery-masonry
