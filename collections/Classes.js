@@ -5,10 +5,10 @@ Classes.allow({
     return !!userId;
   },
   update: function(userId, doc) {
-    return !!userId;
+    return author == userId;
   },
   remove: function(userId, doc) {
-    return !!userId;
+    return author == userId;
   }
 });
 

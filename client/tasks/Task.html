@@ -7,7 +7,7 @@
       <p>{{class}} - Due {{momentFormat dueDate}}</p>
       <blockquote style="word-wrap: break-word">{{description}}</blockquote>
     </div>
-    {{#if $.Session.get 'editMode'}}
+    {{#if $.Session.get 'editTask'}}
       <div class="card">
         {{> quickForm collection="Tasks" doc=this id=updateTaskId type="update" class="update-task-form" autosave=true}}
       </div>

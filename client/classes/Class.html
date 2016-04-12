@@ -16,7 +16,7 @@
     {{#if isAuthor}}
       <i class="fa fa-trash-o" title="Delete Class"></i>
       <i class="fa fa-pencil" title="Edit Class"></i>
-      {{#if $.Session.get 'editMode'}}
+      {{#if $.Session.get 'editClass'}}
         <div class="card">
           {{> quickForm collection="Classes" doc=this id=updateClassId type="update" class="update-class-form" autosave=true}}
         </div>

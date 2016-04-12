@@ -5,7 +5,7 @@
         {{#each messages}}
           {{> Message}}
         {{else}}
-          <div class="new-card-container">
+          <div class="card">
             <p class="sender">clas.si <a class="timestamp" href="#" title="{{timeStampFormat class.createdAt}}" >{{momentFormat class.createdAt}}</a></p>
             <hr />
             <p>Welcome to your new Study Group for <a href="/class/{{class._id}}">{{class.name}}</a>!</p>

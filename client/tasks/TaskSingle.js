@@ -11,7 +11,7 @@ Template.TaskSingle.helpers({
     } else {
       return moment(time).add(5, 'hour').format("MM-DD-YYYY");
     }
-  },
+  }
 });
 Template.TaskSingle.onRendered(function() {
   var self = this;

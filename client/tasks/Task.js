@@ -3,8 +3,7 @@ Template.Task.events({
     Meteor.call('deleteTask', this._id);
   },
   'click .fa-pencil' : function(){
-    console.log("hello");
-    Session.set('editMode', !Session.get('editMode'));
+    Session.set('editTask', !Session.get('editTask'));
   }
 })
 Template.Task.helpers({

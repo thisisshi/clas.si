@@ -3,7 +3,7 @@ Template.Class.events({
     Meteor.call('deleteClass', this._id);
   },
   'click .fa-pencil': function() {
-    Session.set('editMode', !Session.get('editMode'));
+    Session.set('editClass', !Session.get('editClass'));
   },
   'click .fa-trash': function(){
     var user = Meteor.user();
