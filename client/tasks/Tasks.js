@@ -14,7 +14,7 @@ Template.Tasks.onRendered(function() {
   var self = this;
   self.autorun(function() {
     var user = Meteor.user();
-    var email = user.emails[0].address;
+    var email = user && user.emails && user.emails[0].address;
     self.subscribe('tasks', email);
     self.subscribe('classes', email);
   });

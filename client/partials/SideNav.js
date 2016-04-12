@@ -4,3 +4,10 @@ Template.SideNav.events({
     Meteor.logout();
   }
 });
+
+Template.SideNav.onRendered(function(){
+  var self = this;
+  self.autorun(function(){
+    $(".button-collapse").sideNav();
+  });
+});
