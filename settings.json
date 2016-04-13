@@ -1,0 +1,9 @@
+{
+   "galaxy.meteor.com": {
+        "env": {
+                "ROOT_URL": "http://www.clas.si",
+                "MONGO_URL": "mongodb://wine:ss192939@ds021010.mlab.com:21010/classi",
+                "DEPLOY_HOSTNAME": "galaxy.meteor.com meteor deploy --settings ./settings.json "
+        }
+    }
+}

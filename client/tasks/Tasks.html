@@ -1,10 +1,10 @@
 <template name="Tasks">
   <section class="tasks">
     <h4>Tasks</h4>
-    <div class="masonry">
+    <div class="row">
       {{#if Template.subscriptionsReady}}
         {{#each tasks}}
-          <div class="col s12 m6 l4 item">
+          <div class="col s12 m6 l4">
             {{> Task}}
           </div>
         {{else}}
