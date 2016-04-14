@@ -22,3 +22,12 @@ The additional packages will be installed automatically.
 6. Connect your Android device to your computer
 7. Run: `meteor run android-device`
 8. In a few moments the app will be started on your phone, you can now disconnect your phone from your computer
+
+## Roadmap
+
+### Upcoming Features
+- Semesters
+- Offline Tasks and Classes
+- User Profiles
+- Kanban board type
+- Notifications
