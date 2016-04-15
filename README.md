@@ -31,3 +31,4 @@ The additional packages will be installed automatically.
 - User Profiles
 - Kanban board type
 - Notifications
+- Use phone number to automatically log in users
