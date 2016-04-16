@@ -32,3 +32,4 @@ The additional packages will be installed automatically.
 - Kanban board type
 - Notifications
 - Use phone number to automatically log in users
+# Meteor-Boilerplate
