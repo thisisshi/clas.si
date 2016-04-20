@@ -1,7 +1,7 @@
 # clas.si
 clas.si: A Task Manager for Students
 
-##[Demo](http://classi-heroku.herokuapp.com)
+##[Demo](http://clas.si)
 
 Note: The Heroku instance is currently on the free plan and may be down for recharging
 
