@@ -8,7 +8,8 @@ Note: The Heroku instance is currently on the free plan and may be down for rech
 ## Installation
 1. Install meteor by running: `curl https://install.meteor.com/ | sh`
 2. Clone this repository: `git clone https://github.com/thisisshi/clas.si.git`
-3. Start Meteor: `meteor`
+3. Ensure that you have npm installed
+4. Start Meteor: `meteor`
 
 The additional packages will be installed automatically.
 
